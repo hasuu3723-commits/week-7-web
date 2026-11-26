@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="dashboard">
+        <header>
+            <h1>SpendWise</h1>
+            <p>Manage your money. Build better habits.</p>
+        </header>
+
+        <main>
+            <section class="summary">
+                <div class="card">
+                    <h3>Monthly Budget</h3>
+                    <p id="budget">$2,000</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Expenses</h3>
+                    <p id="totalExpenses">$0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Remaining Balance</h3>
+                    <p id="remaining">$0</p>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Budget Status</h2>
+                <p id="status">Your budget status will appear here.</p>
+                <div class="progress">
+                    <div id="progressBar"></div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Expense Categories</h2>
+                <div id="expenseList"></div>
+            </section>
+
+            <section class="card">
+                <h2>Update Your Budget</h2>
+
+                <form id="budgetForm">
+                    <label for="monthlyBudget">Monthly Budget ($)</label>
+                    <input type="number" id="monthlyBudget" min="0" step="0.01" value="2000" required>
+
+                    <label for="food">Food ($)</label>
+                    <input type="number" id="food" min="0" step="0.01" value="300" required>
+
+                    <label for="transport">Transport ($)</label>
+                    <input type="number" id="transport" min="0" step="0.01" value="100" required>
+
+                    <label for="rent">Rent ($)</label>
+                    <input type="number" id="rent" min="0" step="0.01" value="600" required>
+
+                    <label for="entertainment">Entertainment ($)</label>
+                    <input type="number" id="entertainment" min="0" step="0.01" value="100" required>
+
+                    <label for="savings">Savings ($)</label>
+                    <input type="number" id="savings" min="0" step="0.01" value="200" required>
+
+                    <label for="utilities">Utilities ($)</label>
+                    <input type="number" id="utilities" min="0" step="0.01" value="150" required>
+
+                    <button type="submit">Update Dashboard</button>
+                </form>
+
+                <p id="message"></p>
+            </section>
+
+            <section class="card">
+                <h2>Financial Report</h2>
+                <div id="report"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>SpendWise © 2026 | Smart Money Management</p>
+        </footer>
+    </div>
+
+</body>
+</html>
